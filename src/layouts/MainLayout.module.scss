@@ -1,16 +1,16 @@
+@use '../styles/variables' as *;
+
 .layout {
   display: grid;
   min-height: 100vh;
-  grid-template:
-    "header header" 60px
-    "sidebar main" 1fr
-    / 0 1fr;
+  grid-template-rows: $header-height 1fr;
+  grid-template-columns: 0 1fr;
+  grid-template-areas: 
+    "header header"
+    "sidebar main";
 
   &.sidebarOpen {
-    grid-template:
-      "header header" 60px
-      "sidebar main" 1fr
-      / var(--sidebar-width) 1fr;
+    grid-template-columns: $sidebar-width 1fr;
   }
 }
 

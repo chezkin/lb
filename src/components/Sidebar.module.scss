@@ -1,32 +1,22 @@
+@use '../styles/variables' as *;
+
 .sidebar {
   grid-area: sidebar;
-  background: #fff;
-  border-right: 1px solid #eaeaea;
+  background: $white;
+  border-right: 1px solid $border-color;
   padding: 1rem;
-  width: 0;
   overflow: hidden;
-  transition: width 0.3s ease;
-
-  &.open {
-    width: var(--sidebar-width);
-  }
 
   nav {
-    width: var(--sidebar-width);
-    display: flex;
-    flex-direction: column;
+    width: $sidebar-width;
+    @include flex-column;
     gap: 0.5rem;
 
     a {
       white-space: nowrap;
       padding: 0.5rem;
-      text-decoration: none;
-      color: inherit;
-
-      &:hover {
-        background: #f5f5f5;
-        border-radius: 4px;
-      }
+      @include link-reset;
+      @include hover-effect;
     }
   }
 } 
