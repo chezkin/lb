@@ -2,11 +2,13 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
+  direction: rtl;
 }
 
 .description {
   color: #666;
   margin: 1rem 0 2rem;
+  text-align: right;
 }
 
 .section {
@@ -14,6 +16,7 @@
 
   h2 {
     margin-bottom: 1rem;
+    text-align: right;
   }
 }
 
@@ -36,4 +39,39 @@
   th {
     background-color: #f8f9fa;
   }
+
+  code {
+    direction: ltr;
+    display: inline-block;
+  }
 } 
+
+.header {
+  margin-bottom: 2rem;
+  text-align: right;
+  
+  h1 {
+    margin-bottom: 1rem;
+  }
+}
+
+.meta {
+  display: flex;
+  gap: 2rem;
+  color: #666;
+  justify-content: flex-start;
+}
+
+.metaItem {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+
+  span {
+    font-size: 0.875rem;
+  }
+
+  strong {
+    color: #333;
+  }
+}

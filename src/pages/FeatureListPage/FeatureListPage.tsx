@@ -15,6 +15,11 @@ const FeatureListPage = () => {
           >
             <h2>{feature.name}</h2>
             <p>{feature.description}</p>
+            <div className={styles.meta}>
+              <span>גרסה: {feature.version}</span>
+              <span>עודכן: {new Date(feature.lastUpdated).toLocaleDateString('he-IL')}</span>
+              <span>יוצר: {feature.author}</span>
+            </div>
           </Link>
         ))}
       </div>
@@ -22,4 +27,4 @@ const FeatureListPage = () => {
   )
 }
 
-export default FeatureListPage 
+export default FeatureListPage

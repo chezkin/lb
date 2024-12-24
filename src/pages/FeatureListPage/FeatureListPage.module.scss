@@ -25,4 +25,22 @@
   h2 {
     margin-bottom: 0.5rem;
   }
+
+  .meta {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+    font-size: 0.875rem;
+    color: #666;
+
+    span {
+      display: inline-flex;
+      align-items: center;
+      
+      &:not(:last-child)::after {
+        content: '|';
+        margin-right: 1rem;
+      }
+    }
+  }
 } 

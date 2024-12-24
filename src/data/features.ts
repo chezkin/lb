@@ -1,13 +1,18 @@
+export interface FeatureParam {
+  name: string
+  type: string
+  defaultValue: string
+  description: string
+}
+
 export interface Feature {
   id: string
   name: string
   description: string
-  params?: {
-    name: string
-    type: string
-    defaultValue: string
-    description: string
-  }[]
+  author: string
+  version: string
+  lastUpdated: string
+  params?: FeatureParam[]
 }
 
 export const features: Feature[] = [
@@ -15,6 +20,9 @@ export const features: Feature[] = [
     id: 'button',
     name: 'כפתור',
     description: 'קומפוננטת כפתור בסיסית עם מספר וריאציות',
+    author: 'ישראל ישראלי',
+    version: '1.0.0',
+    lastUpdated: '2024-03-15',
     params: [
       {
         name: 'variant',
@@ -34,6 +42,9 @@ export const features: Feature[] = [
     id: 'input',
     name: 'שדה קלט',
     description: 'קומפוננטת קלט טקסט עם תמיכה בוולידציה',
+    author: 'יעקב יעקובי',
+    version: '1.1.0',
+    lastUpdated: '2024-03-14',
     params: [
       {
         name: 'type',
