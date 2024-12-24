@@ -1,0 +1,39 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.description {
+  color: #666;
+  margin: 1rem 0 2rem;
+}
+
+.section {
+  margin: 2rem 0;
+
+  h2 {
+    margin-bottom: 1rem;
+  }
+}
+
+.demo {
+  padding: 2rem;
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  
+  th, td {
+    padding: 0.75rem;
+    border: 1px solid #eaeaea;
+    text-align: right;
+  }
+
+  th {
+    background-color: #f8f9fa;
+  }
+} 

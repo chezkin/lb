@@ -1,0 +1,20 @@
+.layout {
+  min-height: 100vh;
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "main sidebar";
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto 1fr;
+
+  &.sidebarOpen {
+    grid-template-columns: 1fr var(--sidebar-width);
+  }
+}
+
+.main {
+  grid-area: main;
+  padding: 2rem;
+  overflow-y: auto;
+  width: 100%;
+} 
