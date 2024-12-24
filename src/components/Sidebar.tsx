@@ -8,6 +8,7 @@ interface SidebarProps {
 
 const Sidebar = ({ isOpen }: SidebarProps) => {
   return (
+    isOpen &&
     <aside className={`${styles.sidebar} ${isOpen ? styles.open : ''}`}>
       <nav>
         {features.map(feature => (
