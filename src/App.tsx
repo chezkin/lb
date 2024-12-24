@@ -1,8 +1,8 @@
 import { Routes, Route } from 'react-router-dom'
-import MainLayout from './layouts/MainLayout'
+import MainLayout from './layouts/MainLayout/MainLayout'
 import HomePage from './pages/HomePage'
-import FeaturePage from './pages/FeaturePage'
-import FeatureListPage from './pages/FeatureListPage'
+import FeaturePage from './pages/FeaturePage/FeaturePage'
+import FeatureListPage from './pages/FeatureListPage/FeatureListPage'
 
 function App() {
   return (

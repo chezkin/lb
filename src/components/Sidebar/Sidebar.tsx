@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { features } from '../data/features'
+import { features } from '../../data/features'
 import styles from './Sidebar.module.scss'
 
 interface SidebarProps {

@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom'
-import { features } from '../data/features'
+import { features } from '../../data/features'
 import styles from './FeaturePage.module.scss'
 
 const FeaturePage = () => {
