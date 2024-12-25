@@ -1,0 +1,95 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: right;
+  width: 100%;
+}
+
+.label {
+  font-size: 0.875rem;
+  color: #333;
+  font-weight: 500;
+}
+
+.required {
+  color: #dc3545;
+  margin-right: 0.25rem;
+}
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input {
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  direction: rtl;
+
+  &:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(var(--primary-color-rgb), 0.1);
+  }
+
+  &:disabled {
+    background-color: #f5f5f5;
+    cursor: not-allowed;
+  }
+
+  &.error {
+    border-color: #dc3545;
+  }
+
+  &.hasStartIcon {
+    padding-right: 2.5rem;
+  }
+
+  &.hasEndIcon {
+    padding-left: 2.5rem;
+  }
+
+  // גדלים
+  &.small {
+    padding: 0.5rem;
+    font-size: 0.875rem;
+  }
+
+  &.medium {
+    padding: 0.75rem;
+    font-size: 1rem;
+  }
+
+  &.large {
+    padding: 1rem;
+    font-size: 1.125rem;
+  }
+}
+
+.startIcon,
+.endIcon {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  color: #666;
+}
+
+.startIcon {
+  right: 0;
+}
+
+.endIcon {
+  left: 0;
+}
+
+.errorMessage {
+  font-size: 0.75rem;
+  color: #dc3545;
+} 
