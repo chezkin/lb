@@ -1,5 +1,6 @@
 import { useParams } from 'react-router-dom'
 import { features } from '../../data/features'
+import PropsTable from '../../components/PropsTable/PropsTable'
 import styles from './FeaturePage.module.scss'
 
 const FeaturePage = () => {
@@ -32,7 +33,6 @@ const FeaturePage = () => {
 
       <p className={styles.description}>{feature.description}</p>
 
-
       <section className={styles.section}>
         <h2>דוגמה חיה</h2>
         <div className={styles.demo}>
@@ -43,26 +43,7 @@ const FeaturePage = () => {
       {feature.params && feature.params.length > 0 && (
         <section className={styles.section}>
           <h2>פרמטרים</h2>
-          <table className={styles.table}>
-            <thead>
-              <tr>
-                <th>שם</th>
-                <th>סוג</th>
-                <th>ברירת מחדל</th>
-                <th>תיאור</th>
-              </tr>
-            </thead>
-            <tbody>
-              {feature.params.map(param => (
-                <tr key={param.name}>
-                  <td>{param.name}</td>
-                  <td><code>{param.type}</code></td>
-                  <td><code>{param.defaultValue}</code></td>
-                  <td>{param.description}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+          <PropsTable params={feature.params} />
         </section>
       )}
     </div>

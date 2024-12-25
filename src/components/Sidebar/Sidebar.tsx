@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom'
 import { features } from '../../data/features'
+import NavGroup from '../../components/NavGroup/NavGroup'
 import styles from './Sidebar.module.scss'
 
 interface SidebarProps {
@@ -8,16 +8,18 @@ interface SidebarProps {
 
 const Sidebar = ({ isOpen }: SidebarProps) => {
   return (
-    isOpen &&
-    <aside className={`${styles.sidebar} ${isOpen ? styles.open : ''}`}>
-      <nav>
-        {features.map(feature => (
-          <Link key={feature.id} to={`/features/${feature.id}`}>
-            {feature.name}
-          </Link>
-        ))}
-      </nav>
-    </aside>
+    isOpen && (
+      <aside className={`${styles.sidebar} ${isOpen ? styles.open : ''}`}>
+        <nav>
+          <NavGroup
+            title="קומפוננטות"
+            baseUrl="features"
+            items={features}
+          />
+          {/* אפשר להוסיף עוד קבוצות ניווט כאן */}
+        </nav>
+      </aside>
+    )
   )
 }
 

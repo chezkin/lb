@@ -1,0 +1,71 @@
+@use '../../styles/variables' as *;
+
+.navGroup {
+  width: 100%;
+  @include flex-column;
+  gap: 0.5rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding-left: 0.5rem;
+}
+
+.title {
+  flex: 1;
+  padding: 0.5rem;
+  @include link-reset;
+  @include hover-effect;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+  max-width: 80%;
+
+  &.active {
+    color: var(--primary-color);
+  }
+}
+
+.expandButton {
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+  
+  &.expanded {
+    transform: rotate(180deg);
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.items {
+  @include flex-column;
+  gap: 0.25rem;
+  padding-right: 1rem;
+  margin-right: 0.5rem;
+  border-right: 2px solid $border-color;
+}
+
+.item {
+  padding: 0.5rem;
+  @include link-reset;
+  @include hover-effect;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  
+  &.active {
+    color: var(--primary-color);
+    background: $hover-bg;
+    border-radius: 4px;
+  }
+} 
