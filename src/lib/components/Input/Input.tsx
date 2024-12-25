@@ -9,7 +9,7 @@ export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   /** האם השדה חובה */
   required?: boolean
   /** גודל השדה */
-  size?: 'small' | 'medium' | 'large'
+  fieldSize?: 'small' | 'medium' | 'large'
   /** האם להציג אייקון */
   startIcon?: React.ReactNode
   /** האם להציג אייקון בצד שמאל */
@@ -20,7 +20,7 @@ export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
  * קומפוננטת קלט בסיסית
  */
 const Input = forwardRef<HTMLInputElement, InputProps>(
-  ({ label, error, required, size = 'medium', startIcon, endIcon, className, ...props }, ref) => {
+  ({ label, error, required, fieldSize = 'medium', startIcon, endIcon, className, ...props }, ref) => {
     return (
       <div className={styles.wrapper}>
         {label && (
@@ -33,7 +33,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
           {startIcon && <span className={styles.startIcon}>{startIcon}</span>}
           <input
             ref={ref}
-            className={`${styles.input} ${styles[size]} ${error ? styles.error : ''} 
+            className={`${styles.input} ${styles[fieldSize]} ${error ? styles.error : ''} 
               ${startIcon ? styles.hasStartIcon : ''} 
               ${endIcon ? styles.hasEndIcon : ''} 
               ${className || ''}`}

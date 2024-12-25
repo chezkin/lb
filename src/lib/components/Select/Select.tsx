@@ -16,13 +16,13 @@ export interface SelectProps extends SelectHTMLAttributes<HTMLSelectElement> {
   /** אפשרויות הבחירה */
   options: SelectOption[]
   /** גודל השדה */
-  size?: 'small' | 'medium' | 'large'
+  fieldSize?: 'small' | 'medium' | 'large'
   /** טקסט ברירת מחדל */
   placeholder?: string
 }
 
 const Select = forwardRef<HTMLSelectElement, SelectProps>(
-  ({ label, required, error, options, size = 'medium', placeholder, className, ...props }, ref) => {
+  ({ label, required, error, options, fieldSize = 'medium', placeholder, className, ...props }, ref) => {
     return (
       <div className={styles.wrapper}>
         {label && (
@@ -33,7 +33,7 @@ const Select = forwardRef<HTMLSelectElement, SelectProps>(
         )}
         <select
           ref={ref}
-          className={`${styles.select} ${styles[size]} ${error ? styles.error : ''} ${className || ''}`}
+          className={`${styles.select} ${styles[fieldSize]} ${error ? styles.error : ''} ${className || ''}`}
           {...props}
         >
           {placeholder && (
